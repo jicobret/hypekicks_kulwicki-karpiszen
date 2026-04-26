@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "239358019615",
+    "project_id": "sneakers-5c583",
+    "storage_bucket": "sneakers-5c583.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239358019615:android:b66ada2f6f7e11e804ed2a",
+        "android_client_info": {
+          "package_name": "com.example.hypekicks"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcYKJXo4ObjLXsYLgQETKD1hlOBHPxsKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
