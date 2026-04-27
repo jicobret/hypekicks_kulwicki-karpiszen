@@ -12,6 +12,7 @@ class StorefrontActivity : AppCompatActivity() {
     private lateinit var binding: ActivityStorefrontBinding
     private val db = FirebaseFirestore.getInstance()
     private val sneakerList = mutableListOf<Sneaker>()
+    private val fullList = mutableListOf<Sneaker>()
     private lateinit var adapter: SneakerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,12 +53,18 @@ class StorefrontActivity : AppCompatActivity() {
                 sneakerList.add(sneaker)
             }
             adapter.notifyDataSetChanged()
+            fullList.clear()
+            fullList.addAll(sneakerList)
         }
     }
 
     private fun filter(text: String) {
-        val filtered = sneakerList.filter {
-            it.modelName.lowercase().contains(text.lowercase())
+        val filtered = if (text.isEmpty()) {
+            fullList
+        } else {
+            fullList.filter {
+                it.modelName.lowercase().contains(text.lowercase())
+            }
         }
         adapter.updateList(filtered)
     }
