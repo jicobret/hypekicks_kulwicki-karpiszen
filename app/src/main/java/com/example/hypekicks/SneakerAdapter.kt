@@ -36,6 +36,8 @@ class SneakerAdapter(
 
         Glide.with(context)
             .load(sneaker.imageUrl)
+            .placeholder(android.R.drawable.ic_menu_gallery)
+            .error(android.R.drawable.ic_delete)
             .into(image)
 
         return view

@@ -12,8 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hypekicks"
         tools:targetApi="31">
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".AdminPanelActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StorefrontActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
