@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.ConcatAdapter
 import com.example.hypekicks.databinding.ActivityStorefrontBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -63,7 +64,8 @@ class StorefrontActivity : AppCompatActivity() {
             fullList
         } else {
             fullList.filter {
-                it.modelName.lowercase().contains(text.lowercase())
+
+                "${it.brand} ${it.modelName}".lowercase().contains(text.lowercase())
             }
         }
         adapter.updateList(filtered)
